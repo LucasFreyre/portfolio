@@ -7,6 +7,9 @@
     <title>Document</title>
     <link rel="stylesheet" href="style.css">
     <link href='https://fonts.googleapis.com/css?family=Poppins' rel='stylesheet'>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Bungee&display=swap" rel="stylesheet">
     <link href='https://fonts.googleapis.com/css?family=Bebas Neue' rel='stylesheet'>
 
 </head>
@@ -17,8 +20,12 @@
             <p class="logo">LUCAS FREIRE</p>
             <nav>
                 <ul>
-                    <li class="home">HOME</li>
-                    <li>SOBRE MIM</li>
+                    <a href="#main-scroll">
+                        <li class="home">HOME</li>
+                    </a>
+                    <a href="#sobre-mim">
+                        <li>SOBRE MIM</li>
+                    </a>
                     <li>PROJETOS</li>
                     <li>CONTATO</li>
                 </ul>
@@ -33,27 +40,37 @@
             </svg>
         </button>
     </section>
-    <main>
-        <section>
-            <h1 class="apresentacao">Olá, meu nome é Lucas Freire</h1>
-            <p class="caracteristica">Sou um desenvolvedor FrontEnd, <br> apaixonado por criar interfaces modernas e
-                experiências <br> digitais que encantam o usuário.</p>
-            <a class="contato" href="">Contato</a>
+    <main id="main-scroll">
+        <div class="tech-circle">
+            <div class="circle"></div>
+            <div class="circle"></div>
+            <div class="circle"></div>
+            <div class="circle"></div>
+        </div>
+        <h1 class="apresentacao">Olá, meu nome é <span class="nome">Lucas Freire</span></h1>
+        <p class="caracteristica">Sou um desenvolvedor FrontEnd, <br> apaixonado por criar interfaces modernas e
+            experiências <br> digitais que encantam o usuário.</p>
+        <a class="contato" href="">Contato</a>
+    </main>
+    <section id="sobre-mim">
+        <section class="dados">
+            <h1 class="sobre-mim-h1">Sobre Mim</h1>
+            <p class="apresentacao-p">Olá, meu nome é Lucas e sou apaixonado em desenvolvimento web. <br> Essa paixão
+                surgiu
+                nas férias de dezembro
+                de 2024, com influencia de <br> amigos meus, partir daí comecei a construir sites com HTML e CSS</p>
         </section>
-        <aside>
+        <aside class="foto">
             <img class="lucas-foto" src="foto.png" alt="">
         </aside>
-    </main>
-    <section class="sobre-mim">
-        <h1 class="sobre-mim-h1">Sobre Mim</h1>
-        <p class="apresentacao-p">Olá, meu nome é Lucas e sou apaixonado em desenvolvimento web. <br> Essa paixão surgiu
-            nas férias de dezembro
-            de 2024, com influencia de <br> amigos meus, partir daí comecei a construir sites com HTML e CSS</p>
-        <h1 class="habilidades">Habilidades</h1>
+    </section>
+    <section class="habilidades">
+        <h1 class="habilidades-h1">Habilidades</h1>
         <ul>
             <li class="habilidades-itens">HTML</li>
             <li class="habilidades-itens">CSS</li>
             <li class="habilidades-itens">JavaScript</li>
+            <li class="habilidades-itens">Git</li>
         </ul>
     </section>
 </body>
