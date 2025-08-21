@@ -89,7 +89,7 @@ main {
 }
 
 .lucas-foto:hover {
-    transform: scale(1.1);
+    transform: scale(1.1) rotate(-5deg);
     z-index: 3;
 }
 
@@ -98,15 +98,31 @@ a {
     color: black;
 }
 
-.contato {
+.opcao {
+    position: relative;
     transition: .5s;
-    padding: 10px;
+    padding: 10px 10px 10px 30px;
     background-color: rgb(224, 80, 80);
     color: white;
     border-radius: 10px;
     font-size: 1.3em;
+    margin: 0 10px;
 }
-
+.opcao::before {
+    content: "";
+    display: block;
+    width: 30px;
+    height: 30px;
+    background-color: white;
+    -webkit-mask: url('arrow_right_alt_24dp_1F1F1F_FILL0_wght400_GRAD0_opsz24.svg') no-repeat center;
+    -webkit-mask-size: cover;
+    mask: url('arrow_right_alt_24dp_1F1F1F_FILL0_wght400_GRAD0_opsz24.svg') no-repeat center;
+    mask-size: cover;
+    position: absolute;
+    left: 0;
+    top: 50%;
+    transform: translateY(-50%);
+}
 .contato:hover {
     background-color: rgb(221, 104, 104);
 }
@@ -122,6 +138,11 @@ a {
     padding: 10px;
 }
 
+.moon{
+    fill: var(--blackWhite);
+    display: none;
+    padding: 10px;
+}
 .sun-btn {
     background: none;
     border: none;
@@ -192,6 +213,7 @@ a {
     height: 120px;
     text-align: center;
     font-family: 'Bebas Neue';
+    margin-right: 20px;
 }
 
 .habilidades-itens::after {
