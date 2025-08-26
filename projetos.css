@@ -1,0 +1,141 @@
+header {
+    background-color: var(--headerColor);
+    padding: 30px;
+    height: 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+ul {
+    display: flex;
+    list-style: none;
+    gap: 20px;
+    margin-right: 20px;
+}
+
+li:hover {
+    transform: scale(1.1);
+    color: rgb(224, 80, 80);
+}
+
+li::after {
+    transition: .5s;
+    bottom: 0;
+    left: 0;
+    content: "";
+    position: absolute;
+    height: 2px;
+    background-color: var(--blackWhite);
+    width: 0;
+}
+
+li {
+    position: relative;
+    transition: .5s;
+    color: var(--blackWhite);
+    cursor: pointer;
+    font-size: .8em;
+}
+
+li:hover::after {
+    width: 100%;
+}
+
+body {
+    overflow-x: hidden;
+    position: relative;
+    background-color: var(--bodyBackground);
+    font-family: "Bungee", sans-serif;
+}
+
+.logo {
+    color: var(--blackWhite);
+    font-weight: bold;
+}
+
+hr {
+    height: 1px;
+    border: none;
+    background-color: rgb(238, 238, 238);
+}
+
+a {
+    text-decoration: none;
+    color: black;
+}
+
+.sun {
+    fill: var(--blackWhite);
+    display: block;
+    padding: 10px;
+}
+
+.moon {
+    fill: var(--blackWhite);
+    display: none;
+    padding: 10px;
+}
+
+.sun-btn {
+    background: none;
+    border: none;
+    cursor: pointer;
+}
+
+:root {
+    --circles-color: rgb(221, 104, 104);
+    --blackGray: black;
+    --blackWhite: black;
+    --bodyBackground: rgb(221, 219, 219);
+    --headerColor: white;
+}
+
+.darkmode {
+    --circles-color: rgba(221, 104, 104, .2);
+    --blackGray: rgb(223, 198, 198);
+    --blackWhite: white;
+    --bodyBackground: rgb(36, 23, 23);
+    --headerColor: rgb(36, 23, 23);
+}
+
+.container {
+    position: relative;
+    left: 50%;
+}
+
+.hr-projetos {
+    width: 50%;
+    background-color: rgb(221, 104, 104);
+}
+
+.margin-top {
+    margin-top: 20px;
+}
+
+.projetos-itens {
+    padding: 20px;
+}
+
+.box {
+    height: 300px;
+    width: 300px;
+    background-color: black;
+    position: absolute;
+    left: 15%;
+    opacity: 0;
+    transition: opacity .2s;
+}
+
+.display {
+    opacity: 1;
+}
