@@ -7,3 +7,21 @@ projetos.forEach(projeto => {
         document.querySelector(".box").classList.remove("display")
     })
 });
+const primeiro = document.querySelector(".primeiro-js")
+const description = document.querySelector(".description")
+primeiro.addEventListener("click", () => {
+    description.style.display = "block"
+    document.body.classList.add("overlay")
+})
+
+document.addEventListener("keydown", (event) => {
+    if (event.key === "Escape") {
+        description.style.display = "none"
+        document.body.classList.remove("overlay")
+    }
+})
+const x = document.querySelector(".x-mark")
+x.addEventListener("click", () => {
+    description.style.display = "none"
+    document.body.classList.remove("overlay")
+})

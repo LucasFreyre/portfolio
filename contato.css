@@ -1,6 +1,7 @@
 header {
     background-color: var(--headerColor);
     padding: 30px;
+    overflow-x: hidden;
     height: 20px;
     display: flex;
     justify-content: space-between;
@@ -16,7 +17,8 @@ html {
     padding: 0;
 }
 
-ul {
+header nav ul {
+
     display: flex;
     list-style: none;
     gap: 20px;
@@ -71,24 +73,27 @@ a {
     text-decoration: none;
     color: black;
 }
+
 .sun {
     fill: var(--blackWhite);
     display: block;
     padding: 10px;
 }
 
-.moon{
+.moon {
     fill: var(--blackWhite);
     display: none;
     padding: 10px;
 }
+
 .sun-btn {
     background: none;
     border: none;
     cursor: pointer;
 }
+
 :root {
-    --circles-color:rgb(221, 104, 104);
+    --circles-color: rgb(221, 104, 104);
     --blackGray: black;
     --blackWhite: black;
     --bodyBackground: rgb(221, 219, 219);
@@ -96,58 +101,68 @@ a {
 }
 
 .darkmode {
-    --circles-color:rgba(221, 104, 104, .2);
+    --circles-color: rgba(221, 104, 104, .2);
     --blackGray: rgb(223, 198, 198);
     --blackWhite: white;
     --bodyBackground: rgb(36, 23, 23);
     --headerColor: rgb(36, 23, 23);
 }
-#contato{
+
+#contato {
     color: rgb(221, 104, 104);
 }
-.hr-contato{
+
+.hr-contato {
     margin-bottom: 20px;
     width: 80%;
     background-color: rgb(224, 80, 80);
 }
-main{
+
+main {
     height: 60vh;
     justify-content: center;
     display: flex;
     flex-direction: column;
     align-items: center;
 }
-.contato-h1{
+
+.contato-h1 {
     margin-bottom: 20px;
     color: var(--blackWhite);
 }
-.contatos{
+
+.contatos {
     color: var(--blackWhite);
     display: flex;
     justify-content: space-around;
     width: 100%;
 }
-.contato-flex{
+
+.contato-flex {
     gap: 20px;
     align-items: center;
     display: flex;
 }
-.topicos{
+
+.topicos {
     font-size: 1.5em;
 }
-.gmail{
+
+.gmail {
     color: var(--blackWhite);
     cursor: pointer;
     font-family: Arial, Helvetica, sans-serif;
     font-weight: bold;
 }
-.instagram{
+
+.instagram {
     background-color: rgb(221, 104, 104);
     position: relative;
     padding: 10px 10px 10px 30px;
     border-radius: 10px;
 }
-.instagram::after{
+
+.instagram::after {
     content: "";
     position: absolute;
     top: 15%;
@@ -156,4 +171,68 @@ main{
     background-size: cover;
     width: 30px;
     height: 30px;
+}
+
+.menu-bars-nav {
+    display: none;
+}
+
+.menu {
+    display: none;
+    transform: translateY(-100%);
+}
+
+@media (max-width: 760px) {
+    /* header{
+        width: 100%;
+    } */
+    .contatos {
+        font-size: .8em;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    header nav ul {
+        display: none;
+    }
+
+    .menu-bars-nav {
+        display: block;
+    }
+
+    .menu {
+        border-bottom: 1px solid black;
+        display: block;
+        transition: .5s;
+        width: 100%;
+        height: 40%;
+        background: #000;
+        position: absolute;
+        top: 0;
+        z-index: 5;
+    }
+
+    .menu.ativo {
+        transform: translateY(0);
+    }
+
+    .menu ul {
+        height: 100%;
+    }
+
+    .menu ul a {
+        /* border-top: 1px solid rgb(221, 104, 104);
+        border-bottom: 1px solid rgb(221, 104, 104); */
+        text-align: center;
+        width: 100%;
+        height: 33.3%;
+        display: block;
+        background: rgb(221, 219, 219);
+    }
+
+    .menu ul a li {
+        position: relative;
+        transform: translateY(-50%);
+        top: 50%;
+    }
 }

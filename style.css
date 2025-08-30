@@ -3,6 +3,7 @@ header {
     padding: 30px;
     height: 20px;
     display: flex;
+    width: 100wh;
     justify-content: space-between;
     align-items: center;
 }
@@ -16,7 +17,7 @@ html {
     padding: 0;
 }
 
-ul {
+header nav ul {
     display: flex;
     list-style: none;
     gap: 20px;
@@ -47,7 +48,7 @@ li {
     font-size: .8em;
 }
 
-li:hover::after {
+header li:hover::after {
     width: 100%;
 }
 
@@ -104,9 +105,11 @@ a {
     font-size: 1.3em;
     margin: 0 10px;
 }
-.opcao:hover{
+
+.opcao:hover {
     background-color: rgb(212, 109, 109);
 }
+
 .opcao::before {
     content: "";
     display: block;
@@ -122,6 +125,7 @@ a {
     top: 50%;
     transform: translateY(-50%);
 }
+
 .contato:hover {
     background-color: rgb(221, 104, 104);
 }
@@ -137,11 +141,12 @@ a {
     padding: 10px;
 }
 
-.moon{
+.moon {
     fill: var(--blackWhite);
     display: none;
     padding: 10px;
 }
+
 .sun-btn {
     background: none;
     border: none;
@@ -149,7 +154,7 @@ a {
 }
 
 :root {
-    --circles-color:rgb(221, 104, 104);
+    --circles-color: rgb(221, 104, 104);
     --blackGray: black;
     --blackWhite: black;
     --bodyBackground: rgb(221, 219, 219);
@@ -157,7 +162,7 @@ a {
 }
 
 .darkmode {
-    --circles-color:rgba(221, 104, 104, .2);
+    --circles-color: rgba(221, 104, 104, .2);
     --blackGray: rgb(223, 198, 198);
     --blackWhite: white;
     --bodyBackground: rgb(36, 23, 23);
@@ -203,17 +208,19 @@ a {
 
 .habilidades-itens {
     background-color: rgb(221, 104, 104);
-    margin-top: 50px;
     position: relative;
     border-top-left-radius: 20px;
     font-size: 1.3em;
     width: 100px;
+    margin: 50px 20px 0;
+    display: inline-block;
+    list-style: none;
     line-height: 100px;
     height: 120px;
     text-align: center;
     font-family: 'Bebas Neue';
-    margin-right: 20px;
 }
+
 
 .habilidades-itens::after {
     position: absolute;
@@ -283,11 +290,118 @@ a {
         scale: 1;
     }
 }
-.nome{
+
+.nome {
     -webkit-text-stroke: 1px var(--blackWhite);
     color: transparent;
 
 }
-nav a.active li{
+
+nav a.active li {
     color: rgb(221, 104, 104);
+}
+
+.menu-bars-nav {
+    display: none;
+}
+
+.menu {
+    display: none;
+    transform: translateY(-100%);
+}
+
+@media (max-width:1220px) {
+    .circle:nth-child(1) {
+        width: 150px;
+        height: 150px;
+    }
+
+    .circle:nth-child(2) {
+        width: 230px;
+        height: 230px;
+    }
+
+    .circle:nth-child(3) {
+        width: 100px;
+        height: 100px;
+    }
+
+    .apresentacao-p {
+        font-size: .9em;
+    }
+
+    .lucas-foto {
+        width: 200px;
+    }
+}
+
+@media (max-width:820px) {
+    .apresentacao-p {
+        font-size: .9em;
+        margin-left: 20px;
+        width: 80%;
+    }
+
+    .sobre-mim-h1 {
+        margin-left: 20px;
+    }
+}
+
+@media (max-width: 570px) {
+    header nav ul {
+        display: none;
+    }
+
+    .menu-bars-nav {
+        display: block;
+    }
+
+    .menu {
+        border-bottom: 1px solid black;
+        display: block;
+        transition: .5s;
+        width: 100%;
+        height: 40%;
+        background: #000;
+        position: absolute;
+        top: 0;
+        z-index: 5;
+    }
+
+    .menu.ativo {
+        transform: translateY(0);
+    }
+
+    .menu ul {
+        height: 100%;
+    }
+
+    .menu ul a {
+        /* border-top: 1px solid rgb(221, 104, 104);
+        border-bottom: 1px solid rgb(221, 104, 104); */
+        text-align: center;
+        width: 100%;
+        height: 25%;
+        display: block;
+        background: rgb(221, 219, 219);
+    }
+
+    .menu ul a li {
+        position: relative;
+        transform: translateY(-50%);
+        top: 50%;
+    }
+
+    #sobre-mim {
+        flex-direction: column;
+    }
+
+    .sobre-mim-h1,
+    .apresentacao-p {
+        text-align: left;
+    }
+
+    .sobre-mim-h1 {
+
+    }
 }

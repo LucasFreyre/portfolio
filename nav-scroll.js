@@ -38,12 +38,12 @@ const observer = new IntersectionObserver(entries => {
             navLinks.forEach(link => link.classList.remove("active"))
 
             const activeLink = document.querySelector(`nav a[href="#${id}"]`)
-            if(activeLink) activeLink.classList.add("active")
+            if (activeLink) activeLink.classList.add("active")
 
         }
     })
 },
-{threshold: 0.5}
+    { threshold: 0.5 }
 )
 sections.forEach(section => {
     observer.observe(section)
