@@ -16,7 +16,7 @@ html {
     padding: 0;
 }
 
-ul {
+header ul {
     display: flex;
     list-style: none;
     gap: 20px;
@@ -52,10 +52,14 @@ li:hover::after {
 }
 
 body {
-    overflow-x: hidden;
     position: relative;
     background-color: var(--bodyBackground);
     font-family: "Bungee", sans-serif;
+}
+
+html,
+body {
+    overflow-x: hidden;
 }
 
 .logo {
@@ -93,6 +97,8 @@ a {
 }
 
 :root {
+    --whiteBlack: white;
+    --sobre-mim-color: rgba(221, 104, 104, .5);
     --circles-color: rgb(221, 104, 104);
     --blackGray: black;
     --blackWhite: black;
@@ -101,6 +107,8 @@ a {
 }
 
 .darkmode {
+    --whiteBlack: black;
+    --sobre-mim-color: rgba(255, 255, 255, 0.2);
     --circles-color: rgba(221, 104, 104, .2);
     --blackGray: rgb(223, 198, 198);
     --blackWhite: white;
@@ -147,8 +155,8 @@ main {
 .description {
     display: none;
     padding: 20px;
-    width: 25%;
-    height: 80%;
+    width: 35%;
+    height: 75%;
     top: 10%;
     transform: translateX(-50%);
     left: 50%;
@@ -166,7 +174,7 @@ main {
     margin: 40px 0;
     line-height: 1.5;
     position: absolute;
-    top: 50%;
+    bottom: 30px;
     transform: translateY(-50%);
 }
 
@@ -218,6 +226,101 @@ main {
     border-radius: 10px;
     font-size: 1.4em;
 }
-.container h1, .container p{
+
+.container h1,
+.container p {
     color: var(--blackWhite);
 }
+
+.menu-bars-nav {
+    fill: var(--blackWhite);
+    display: none;
+}
+
+.menu {
+    display: none;
+    transform: translateY(-100%);
+}
+
+@media (max-width: 860px) {
+    .description p {
+        font-size: .8em;
+    }
+}
+
+@media (max-width: 570px) {
+    header nav ul {
+        display: none;
+    }
+
+    .habilidades ul {
+        display: grid;
+        grid-template-columns: auto auto;
+    }
+
+    .menu-bars-nav {
+        display: block;
+    }
+
+    .menu {
+        border-bottom: 1px solid black;
+        display: block;
+        transition: .5s;
+        width: 100%;
+        height: 40%;
+        background: #000;
+        position: absolute;
+        top: 0;
+        z-index: 5;
+    }
+
+    .menu.ativo {
+        transform: translateY(0);
+    }
+
+    .menu ul {
+        height: 100%;
+    }
+
+    .menu ul a {
+        /* border-top: 1px solid rgb(221, 104, 104);
+        border-bottom: 1px solid rgb(221, 104, 104); */
+        text-align: center;
+        width: 100%;
+        height: 33.3%;
+        display: block;
+        background: black;
+    }
+
+    .menu ul a li {
+        color: var(--sobre-mim-color);
+        position: relative;
+        transform: translateY(-50%);
+        top: 50%;
+    }
+}
+
+@media (max-width: 500px) {
+    .description {
+        width: 60%;
+    }
+
+    .description p {
+        font-size: .7em;
+        bottom: 60px;
+    }
+
+    .container {
+        left: 0;
+    }
+
+    aside {
+        display: none;
+    }
+
+    .hr-projetos {
+        width: 100%;
+        background-color: rgb(221, 104, 104);
+    }
+}
+

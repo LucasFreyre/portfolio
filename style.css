@@ -82,7 +82,7 @@ main {
     transition: .5s;
     width: 300px;
     border-radius: 50%;
-    border: 3px solid rgb(224, 80, 80);
+    border: 3px solid var(--sobre-mim-color);
 }
 
 .lucas-foto:hover {
@@ -154,6 +154,8 @@ a {
 }
 
 :root {
+    --whiteBlack: white;
+    --sobre-mim-color: rgba(221, 104, 104, .5);
     --circles-color: rgb(221, 104, 104);
     --blackGray: black;
     --blackWhite: black;
@@ -162,6 +164,8 @@ a {
 }
 
 .darkmode {
+    --whiteBlack: black;
+    --sobre-mim-color: rgba(255, 255, 255, 0.2);
     --circles-color: rgba(221, 104, 104, .2);
     --blackGray: rgb(223, 198, 198);
     --blackWhite: white;
@@ -182,17 +186,28 @@ a {
 }
 
 #sobre-mim {
-    color: var(--blackWhite);
+    transition: .5s;
+    margin: 0 40px;
+    background: rgba(0, 0, 0, .9);
+    color: var(--sobre-mim-color);
     height: 90vh;
     display: flex;
+    border-radius: 20px;
+    scale: .9;
     align-items: center;
     justify-content: space-around;
 }
 
+#sobre-mim:hover {
+    scale: 1;
+}
+
+
 .apresentacao-p {
+    transition: .5s;
     font-size: 1.2em;
     margin-top: 20px;
-    color: var(--blackGray);
+    color: var(--sobre-mim-color);
 }
 
 .sobre-mim-h1,
@@ -257,6 +272,7 @@ a {
 }
 
 .circle:nth-child(1) {
+    z-index: -4;
     width: 200px;
     height: 200px;
     top: 10%;
@@ -264,6 +280,7 @@ a {
 }
 
 .circle:nth-child(2) {
+    z-index: -4;
     width: 300px;
     height: 300px;
     top: 50%;
@@ -272,6 +289,7 @@ a {
 
 .circle:nth-child(3) {
     width: 150px;
+    z-index: -4;
     height: 150px;
     top: 70%;
     left: 20%;
@@ -302,6 +320,7 @@ nav a.active li {
 }
 
 .menu-bars-nav {
+    fill: var(--blackWhite);
     display: none;
 }
 
@@ -352,6 +371,11 @@ nav a.active li {
         display: none;
     }
 
+    .habilidades ul {
+        display: grid;
+        grid-template-columns: auto auto;
+    }
+
     .menu-bars-nav {
         display: block;
     }
@@ -383,10 +407,11 @@ nav a.active li {
         width: 100%;
         height: 25%;
         display: block;
-        background: rgb(221, 219, 219);
+        background: black;
     }
 
     .menu ul a li {
+        color: var(--sobre-mim-color);
         position: relative;
         transform: translateY(-50%);
         top: 50%;
@@ -401,7 +426,42 @@ nav a.active li {
         text-align: left;
     }
 
-    .sobre-mim-h1 {
+    .apresentacao {
+        font-size: 1.4em;
+    }
+}
 
+@media (max-width: 440px) {
+    .sobre-mim-h1 {
+        font-size: 1.4em;
+    }
+
+    .caracteristica {
+        font-size: .8em;
+    }
+
+
+    .nome {
+        display: block;
+    }
+
+    .opcao {
+        display: inline-block;
+        margin-top: 10px;
+    }
+
+    .circle:nth-child(1) {
+        width: 80px;
+        height: 80px;
+    }
+
+    .circle:nth-child(2) {
+        width: 100px;
+        height: 100px;
+    }
+
+    .circle:nth-child(3) {
+        width: 60px;
+        height: 60px;
     }
 }
