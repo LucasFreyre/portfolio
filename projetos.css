@@ -108,7 +108,7 @@ a {
 
 .darkmode {
     --whiteBlack: black;
-    --sobre-mim-color: rgba(255, 255, 255, 0.2);
+    --sobre-mim-color: #7B7272;
     --circles-color: rgba(221, 104, 104, .2);
     --blackGray: rgb(223, 198, 198);
     --blackWhite: white;

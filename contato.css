@@ -93,6 +93,8 @@ a {
 }
 
 :root {
+    --whiteBlack: white;
+    --sobre-mim-color: rgba(221, 104, 104, .5);
     --circles-color: rgb(221, 104, 104);
     --blackGray: black;
     --blackWhite: black;
@@ -101,6 +103,8 @@ a {
 }
 
 .darkmode {
+    --whiteBlack: black;
+    --sobre-mim-color: #7B7272;
     --circles-color: rgba(221, 104, 104, .2);
     --blackGray: rgb(223, 198, 198);
     --blackWhite: white;
@@ -183,6 +187,7 @@ main {
 }
 
 @media (max-width: 760px) {
+
     /* header{
         width: 100%;
     } */
@@ -197,6 +202,7 @@ main {
     }
 
     .menu-bars-nav {
+        fill: var(--blackWhite);
         display: block;
     }
 
@@ -227,10 +233,11 @@ main {
         width: 100%;
         height: 33.3%;
         display: block;
-        background: rgb(221, 219, 219);
+        background: black;
     }
 
     .menu ul a li {
+        color: var(--sobre-mim-color);
         position: relative;
         transform: translateY(-50%);
         top: 50%;
