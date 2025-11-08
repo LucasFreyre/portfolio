@@ -66,12 +66,19 @@ body {
     color: var(--blackWhite);
     font-weight: bold;
 }
+<<<<<<< HEAD
 
 .hr {
     display: flex;
     justify-content: center;
 }
 
+=======
+.hr{
+    display: flex;
+    justify-content: center;
+}
+>>>>>>> 0c023dd99d80b8b218431421ce97fdd07085d7ab
 .hr-original {
     height: 2px;
     border: none;
@@ -158,7 +165,11 @@ a {
 }
 
 .display {
+<<<<<<< HEAD
     transition: 2s;
+=======
+    transition:2s;
+>>>>>>> 0c023dd99d80b8b218431421ce97fdd07085d7ab
     opacity: 1;
 }
 
@@ -254,6 +265,17 @@ main {
 .menu {
     display: none;
     transform: translateY(-100%);
+}
+.p-hover{
+    color: var(--blackWhite);
+    position: absolute;
+    transition: .5s;
+    margin-top: 100px;
+    margin-left: 100px;
+}
+.p-sumir {
+    transition: 1s;
+    display: none;
 }
 
 .p-hover {
@@ -362,4 +384,8 @@ footer {
         width: 100%;
         background-color: rgb(221, 104, 104);
     }
+<<<<<<< HEAD
 }
+=======
+}
+>>>>>>> 0c023dd99d80b8b218431421ce97fdd07085d7ab

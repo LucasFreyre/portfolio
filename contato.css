@@ -64,15 +64,26 @@ body {
     font-weight: bold;
 }
 
+<<<<<<< HEAD
 .hr {
     display: flex;
     justify-content: center;
 }
 
+=======
+.hr{
+    display: flex;
+    justify-content: center;
+}
+>>>>>>> 0c023dd99d80b8b218431421ce97fdd07085d7ab
 hr {
     height: 2px;
     border: none;
     width: 90%;
+<<<<<<< HEAD
+=======
+    position: absolute;
+>>>>>>> 0c023dd99d80b8b218431421ce97fdd07085d7ab
     background-color: var(--blackWhite);
 }
 
