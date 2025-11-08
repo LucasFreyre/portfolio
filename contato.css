@@ -1,4 +1,5 @@
 header {
+    overflow-y: hidden;
     background-color: var(--headerColor);
     padding: 30px;
     overflow-x: hidden;
@@ -54,7 +55,7 @@ li:hover::after {
 }
 
 body {
-    background-color: var(--bodyBackground);
+    background-color: var(--body-Background);
     font-family: "Bungee", sans-serif;
 }
 
@@ -63,10 +64,16 @@ body {
     font-weight: bold;
 }
 
+.hr {
+    display: flex;
+    justify-content: center;
+}
+
 hr {
-    height: 1px;
+    height: 2px;
     border: none;
-    background-color: rgb(238, 238, 238);
+    width: 90%;
+    background-color: var(--blackWhite);
 }
 
 a {
@@ -93,16 +100,18 @@ a {
 }
 
 :root {
+    --body-Background: #ffe1c9;
     --whiteBlack: white;
     --sobre-mim-color: rgba(221, 104, 104, .5);
-    --circles-color: rgb(221, 104, 104);
+    --circles-color: rgb(211, 44, 44);
     --blackGray: black;
     --blackWhite: black;
     --bodyBackground: rgb(221, 219, 219);
-    --headerColor: white;
+    --headerColor: #ffe1c9;
 }
 
 .darkmode {
+    --body-Background: rgb(36, 23, 23);
     --whiteBlack: black;
     --sobre-mim-color: #7B7272;
     --circles-color: rgba(221, 104, 104, .2);
@@ -123,8 +132,8 @@ a {
 }
 
 main {
-    height: 60vh;
-    justify-content: center;
+    height: 40vh;
+    justify-content: start;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -186,6 +195,59 @@ main {
     transform: translateY(-100%);
 }
 
+#enviar {
+    margin: 20px 0 0 0;
+    width: 200px;
+    background: #DD6868;
+    border: none;
+    padding: 10px;
+    border-radius: 10px;
+    border-radius: 10px;
+}
+
+.formulario form {
+    padding: 50px;
+    width: 80%;
+    background: #222222;
+    border-radius: 20px;
+}
+
+.formulario {
+    text-align: center;
+    flex-direction: column;
+    height:80vh;
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: start;
+}
+.formulario h1 {
+    margin: 40px 0;
+    color: var(--blackWhite);
+}
+.informacoes{
+    margin: 20px 0;
+}
+.mensagem{
+    height: 30px;
+    line-height: 30px;
+}
+footer{
+    gap: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100px;
+    background: #000;
+}
+.rede-social{
+    width: 30px;
+}
+textarea{
+    width: 400px;
+    height:50px;
+    resize: none;
+}
 @media (max-width: 760px) {
 
     /* header{

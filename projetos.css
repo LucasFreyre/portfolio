@@ -53,7 +53,7 @@ li:hover::after {
 
 body {
     position: relative;
-    background-color: var(--bodyBackground);
+    background-color: var(--body-Background);
     font-family: "Bungee", sans-serif;
 }
 
@@ -67,10 +67,17 @@ body {
     font-weight: bold;
 }
 
-hr {
-    height: 1px;
+.hr {
+    display: flex;
+    justify-content: center;
+}
+
+.hr-original {
+    height: 2px;
     border: none;
-    background-color: rgb(238, 238, 238);
+    width: 90%;
+    position: absolute;
+    background-color: var(--blackWhite);
 }
 
 a {
@@ -97,16 +104,18 @@ a {
 }
 
 :root {
+    --body-Background: #ffe1c9;
     --whiteBlack: white;
     --sobre-mim-color: rgba(221, 104, 104, .5);
-    --circles-color: rgb(221, 104, 104);
+    --circles-color: rgb(211, 44, 44);
     --blackGray: black;
     --blackWhite: black;
     --bodyBackground: rgb(221, 219, 219);
-    --headerColor: white;
+    --headerColor: #ffe1c9;
 }
 
 .darkmode {
+    --body-Background: rgb(36, 23, 23);
     --whiteBlack: black;
     --sobre-mim-color: #7B7272;
     --circles-color: rgba(221, 104, 104, .2);
@@ -122,8 +131,10 @@ a {
 }
 
 .hr-projetos {
+    height: 2px;
+    border: none;
     width: 50%;
-    background-color: rgb(221, 104, 104);
+    background-color: var(--circles-color);
 }
 
 .margin-top {
@@ -137,14 +148,17 @@ a {
 
 .box {
     width: 30%;
+    border: 1px solid black;
     background-color: black;
     position: absolute;
     left: 5%;
     opacity: 0;
+    border-radius: 10px;
     transition: opacity .2s;
 }
 
 .display {
+    transition: 2s;
     opacity: 1;
 }
 
@@ -242,6 +256,32 @@ main {
     transform: translateY(-100%);
 }
 
+.p-hover {
+    color: var(--blackWhite);
+    position: absolute;
+    transition: .5s;
+    margin-top: 100px;
+    margin-left: 100px;
+}
+
+.p-sumir {
+    transition: 1s;
+    display: none;
+}
+
+footer {
+    gap: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100px;
+    background: #000;
+}
+
+.rede-social {
+    width: 30px;
+}
+
 @media (max-width: 860px) {
     .description p {
         font-size: .8em;
@@ -323,4 +363,3 @@ main {
         background-color: rgb(221, 104, 104);
     }
 }
-

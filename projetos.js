@@ -25,3 +25,10 @@ x.addEventListener("click", () => {
     description.style.display = "none"
     document.body.classList.remove("overlay")
 })
+
+primeiro.addEventListener("mouseenter", () => {
+    document.querySelector(".p-hover").classList.add("p-sumir")
+})
+primeiro.addEventListener("mouseleave", () => {
+    document.querySelector(".p-hover").classList.remove("p-sumir")
+})
