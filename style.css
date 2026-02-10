@@ -275,7 +275,7 @@ a {
     left: 25%;
     bottom: 20px
 }
-.php::before {
+.java::before {
     content: '';
     position: absolute;
     background: url(php-brands-solid-full.svg) no-repeat;
