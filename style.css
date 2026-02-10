@@ -278,7 +278,7 @@ a {
 .java::before {
     content: '';
     position: absolute;
-    background: url(php-brands-solid-full.svg) no-repeat;
+    background: url(java-brands-solid-full.svg) no-repeat;
     background-size: cover;
     background-repeat: no-repeat;
     width: 50px;
